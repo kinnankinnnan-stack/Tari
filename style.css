@@ -1,0 +1,629 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap");
+
+/* =========================
+   DASAR
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --cream: #f8ecd7;
+  --cream-light: #fff8ea;
+  --brown: #4a2714;
+  --brown-light: #6b4324;
+  --gold: #b5822c;
+  --border: #d8bb88;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--brown);
+  background: var(--cream);
+  line-height: 1.6;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  height: 72px;
+
+  padding: 0 6%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: rgba(255, 248, 234, 0.97);
+
+  border-bottom: 1px solid var(--border);
+
+  position: sticky;
+  top: 0;
+
+  z-index: 100;
+}
+
+.logo {
+  color: var(--gold);
+
+  font-size: 32px;
+}
+
+nav {
+  display: flex;
+
+  gap: 40px;
+}
+
+nav a {
+  text-decoration: none;
+
+  color: var(--brown);
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 18px;
+
+  padding: 8px 0;
+
+  transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--gold);
+
+  border-bottom: 2px solid var(--gold);
+}
+
+/* =========================
+   HERO / BERANDA
+========================= */
+
+.hero {
+  min-height: 560px;
+
+  display: grid;
+
+  grid-template-columns: 48% 52%;
+
+  background:
+    radial-gradient(
+      circle at 20% 50%,
+      rgba(181, 130, 44, 0.14),
+      transparent 28%
+    ),
+    var(--cream);
+}
+
+.hero-text {
+  padding: 65px 9%;
+
+  display: flex;
+
+  justify-content: center;
+
+  flex-direction: column;
+
+  position: relative;
+}
+
+.wayang {
+  position: absolute;
+
+  left: 4%;
+
+  bottom: 30px;
+
+  font-size: 110px;
+
+  color: #a77731;
+
+  opacity: 0.65;
+
+  transform: rotate(45deg);
+}
+
+.subtitle {
+  color: var(--gold);
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 3px;
+}
+
+.hero h1 {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(65px, 8vw, 105px);
+
+  line-height: 0.85;
+
+  margin: 15px 0;
+
+  font-weight: 700;
+}
+
+.ornament {
+  color: var(--gold);
+
+  letter-spacing: 4px;
+
+  margin: 5px 0 15px;
+}
+
+.hero h2 {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 27px;
+
+  line-height: 1.1;
+
+  margin-bottom: 13px;
+}
+
+.desc {
+  max-width: 480px;
+
+  color: #6b5543;
+
+  font-size: 13px;
+}
+
+.button {
+  width: max-content;
+
+  margin-top: 25px;
+
+  padding: 11px 24px;
+
+  border-radius: 30px;
+
+  background: var(--brown);
+
+  color: #fff5df;
+
+  text-decoration: none;
+
+  font-size: 11px;
+
+  transition: 0.3s;
+}
+
+.button:hover {
+  background: var(--gold);
+
+  transform: translateY(-3px);
+}
+
+.hero-image {
+  position: relative;
+
+  overflow: hidden;
+}
+
+.hero-image::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(90deg, var(--cream), transparent 22%);
+
+  z-index: 1;
+}
+
+.hero-image img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  display: block;
+}
+
+/* =========================
+   PENGERTIAN
+========================= */
+
+.pengertian {
+  min-height: 410px;
+
+  padding: 60px 8%;
+
+  display: grid;
+
+  grid-template-columns: 90px 44% 1fr;
+
+  gap: 30px;
+
+  align-items: center;
+
+  border-top: 1px solid var(--border);
+
+  background: var(--cream-light);
+}
+
+.wayang-left {
+  font-size: 95px;
+
+  color: #a77731;
+
+  opacity: 0.65;
+
+  transform: rotate(45deg);
+}
+
+.pengertian h2,
+.keunikan h2 {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 53px;
+
+  line-height: 0.88;
+
+  margin: 12px 0;
+}
+
+.garis {
+  width: 100px;
+
+  height: 2px;
+
+  background: var(--gold);
+
+  margin: 17px 0;
+}
+
+.pengertian-text p,
+.keunikan-text > p {
+  max-width: 470px;
+
+  font-size: 12px;
+
+  color: #6b5543;
+
+  margin-bottom: 10px;
+}
+
+.gambar-tari {
+  height: 280px;
+
+  display: grid;
+
+  place-items: center;
+}
+
+.lingkaran {
+  width: 300px;
+  height: 300px;
+
+  border-radius: 50%;
+
+  border: 2px solid #d2ad68;
+
+  overflow: hidden;
+
+  background: #ead4ab;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 8px 25px rgba(74, 39, 20, 0.12);
+}
+
+.lingkaran img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  display: block;
+}
+ 
+.button .lingkaran span {
+  font-family: serif;
+
+  font-size: 90px;
+}
+
+/* =========================
+   CONTOH TARI
+========================= */
+
+.contoh {
+  padding: 45px 7% 55px;
+
+  border-top: 1px solid var(--border);
+
+  background: #f4e5ca;
+}
+
+.center {
+  text-align: center;
+}
+
+.contoh > h2 {
+  text-align: center;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 44px;
+}
+
+.cards {
+  margin-top: 18px;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 22px;
+}
+
+.card {
+  background: var(--cream-light);
+
+  border: 1px solid #dfc79d;
+
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  box-shadow: 0 7px 18px rgba(74, 39, 20, 0.08);
+
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-7px);
+}
+
+.card img {
+  width: 100%;
+
+  height: 160px;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+.card-content {
+  padding: 17px;
+
+  text-align: center;
+}
+
+.card h3 {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 26px;
+
+  margin-bottom: 5px;
+}
+
+.card p {
+  font-size: 11px;
+
+  color: #6b5543;
+}
+
+.card span {
+  display: block;
+
+  color: #9b6b25;
+
+  font-size: 10px;
+
+  margin-top: 10px;
+}
+
+/* =========================
+   KEUNIKAN
+========================= */
+
+.keunikan {
+  padding: 55px 8%;
+
+  display: grid;
+
+  grid-template-columns: 34% 66%;
+
+  gap: 35px;
+
+  align-items: center;
+
+  border-top: 1px solid var(--border);
+}
+
+.fitur {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 8px;
+}
+
+.item {
+  text-align: center;
+
+  padding: 10px;
+
+  border-right: 1px solid #d6bc8e;
+}
+
+.item:last-child {
+  border-right: none;
+}
+
+.icon {
+  width: 66px;
+
+  height: 66px;
+
+  margin: auto;
+
+  border-radius: 50%;
+
+  background: #ead6ae;
+
+  border: 1px solid #d4b16e;
+
+  display: grid;
+
+  place-items: center;
+
+  font-size: 25px;
+}
+
+.item h3 {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 20px;
+
+  margin: 9px 0 2px;
+}
+
+.item p {
+  font-size: 10px;
+
+  color: #6b5543;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  background: #321a0d;
+
+  color: #f0d493;
+
+  text-align: center;
+
+  padding: 40px 10%;
+
+  border-top: 2px solid #a97628;
+}
+
+.footer-icon {
+  font-size: 28px;
+}
+
+footer p {
+  max-width: 700px;
+
+  margin: 5px auto 15px;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-style: italic;
+
+  font-size: 22px;
+
+  line-height: 1.35;
+}
+
+footer small {
+  color: #c8a46b;
+
+  font-size: 9px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+  .navbar {
+    height: auto;
+
+    padding: 15px 5%;
+
+    flex-direction: column;
+
+    gap: 8px;
+  }
+
+  nav {
+    gap: 18px;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-text {
+    padding: 55px 8% 35px;
+  }
+
+  .hero-image {
+    height: 430px;
+  }
+
+  .pengertian {
+    grid-template-columns: 1fr;
+
+    padding: 55px 8%;
+  }
+
+  .wayang-left {
+    display: none;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .keunikan {
+    grid-template-columns: 1fr;
+  }
+
+  .fitur {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .item {
+    border-right: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 62px;
+  }
+
+  .contoh > h2 {
+    font-size: 36px;
+  }
+
+  .pengertian h2,
+  .keunikan h2 {
+    font-size: 45px;
+  }
+}
